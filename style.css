@@ -1,0 +1,539 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(#b6daff, #504b82);
+    color: #333;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5d2c88;
+    transition: 0.3s;
+}
+
+/* Wrapper */
+.page-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-image: linear-gradient(#a6a5ee, #c5d1f7);
+    padding: 15px 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    border: 1.5px solid rgb(212, 227, 250);
+}
+.nav-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo-title a {
+    font-weight: 700;
+    color:#5c3974;
+}
+
+.nav-logo-title img {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    content: url("https://miro.medium.com/v2/resize:fit:1080/0*A7MUqyCLvZDcHkfM.jpg");
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #48428a;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(129, 73, 124);
+    transition: 0.3s;
+}
+
+/* Header Section */
+#header {
+    background-color: #96b7de;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header-texts {
+    flex: 1;
+    min-width: 280px;
+}
+
+.header-texts h1 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    color: #032d5dc4;
+}
+
+.header-texts h3 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #3f4f88;
+}
+
+.header-texts p {
+    margin-top: 10px;
+    color: #224972;
+}
+
+.header-filler {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    min-height: 150px;
+    content: url("https://static.wixstatic.com/media/a61b57_2ed096f090e147b9a1ad0f012164237e~mv2.jpg/v1/fill/w_800,h_500,al_c,q_85/a61b57_2ed096f090e147b9a1ad0f012164237e~mv2.jpg");
+}
+
+/* Content and Aside Section */
+.content-aside {
+    display: flex;
+    margin: 40px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 2;
+    min-width: 300px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border: 2px solid #96a7e4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(68, 113, 209);
+}
+
+.content h2 {
+    margin-bottom: 10px;
+    color: #2a4477;
+}
+
+.content h4 {
+    color: #7d54ac;
+    margin-bottom: 10px;
+}
+
+.content-second {
+    margin-top:25px;
+}
+
+aside {
+    position: sticky;
+    top: 90px; /* Leaves room below the sticky nav */
+    align-self: flex-start;
+    flex: 1;
+    min-width: 250px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border: 2px solid #96a7e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+aside h2 {
+    color: #226896;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 8px;
+}
+
+/* Articles Section */
+.articles {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.articles p {
+    margin-bottom: 20px;
+}
+
+.articles a {
+    background-color: #7c98da;
+    padding: 10px;
+    width: 30%;
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.articles a:hover {
+    background-color: #dce6ff3c;
+    color: rgb(110, 118, 207);
+    border: 1.5px solid rgb(125, 87, 154); 
+    transition: 0.5s;
+}
+
+.articles table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.articles td.article, 
+.articles td.article-long {
+    background: rgb(186, 199, 224);
+    padding: 20px;
+    vertical-align: top;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.articles img {
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.articles table .row-first .article:nth-child(1) img {
+    content: url("https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg");
+}
+
+.articles table .row-first .article:nth-child(2) img {
+    content: url("https://d2zp5xs5cp8zlg.cloudfront.net/image-62171-800.jpg");
+}
+
+.articles table .row-first .article:nth-child(3) img {
+    content: url("https://www.pawlovetreats.com/cdn/shop/articles/pembroke-welsh-corgi-puppy_600x.jpg?v=1628638716");
+}
+
+.articles table .row-second img {
+    content: url("https://media.istockphoto.com/id/1168451046/photo/cat-and-dog-sleeping-puppy-and-kitten-sleep.jpg?s=612x612&w=0&k=20&c=WufdaqZhhwOT6sJFAb6g7-laVoBWaf66XefiWUt44BQ=");
+}
+
+.creativity-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Each mini section (card) */
+.creativity-wrapper > div {
+    flex: 1 1 calc(50% - 30px); /* Two items per row, minus the gap */
+    display: flex;
+    background-color: rgb(170, 171, 207);
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    border-radius: 12px;
+}
+
+/* Image styling */
+.creativity-wrapper img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* Mini content styling */
+.mini-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #403b79;
+}
+
+.mini-one img {
+    content: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4IoiZyX73T-6i59-D4zDKuGxGtnVHEdLUQA&s");
+}
+
+.mini-two img {
+    content: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2D_UapJneGr268tCtF7KlAlgy_8WesH0wOA&s");
+}
+
+.mini-three img {
+    content: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEBG0xNkufTXSRymMvnXT6YbbARK1z0-arw&s");
+}
+
+.mini-four img {
+    content: url("https://www.babyanimalprints.com/cdn/shop/products/PANDAG_040200_1400x.jpg?v=1603219203");
+}
+
+.mini-content h2 {
+    color: #57356d;
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 20px;
+    background-color: #7e6eaf85;
+    padding: 40px 20px;
+    gap: 30px;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 20px;
+}
+
+.footer-logo {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-form {
+    /* flex: 1 1 300px; */
+    padding: 20px;
+    background-color: #ffffff7b;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.footer-credit {
+    margin-top: 10px;
+}
+
+.footer-logo h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-credit h3 {
+    
+    font-size: 12px;
+    text-align: center;
+    color: #e2eff8;
+}
+
+.footer-logo p,
+.footer-credit p {
+    font-size: 14px;
+    color: #b4cbf7;
+}
+
+.footer-form p {
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: #3f1e5c;
+}
+
+.footer-form label {
+    font-size: 14px;
+    color: #430748;
+}
+
+.footer-form input[type="text"],
+.footer-form select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.footer-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.footer-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ae84bf;
+    color: rgb(53, 16, 99);
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+    background-color: #6d2c98;
+    color: white;
+}
+
+/* Hover Effects for Cards (Creativity Section) */
+.creativity-wrapper > div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creativity-wrapper > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Hover Effects for Article Cards */
+.articles td.article,
+.articles td.article-long {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articles td.article:hover,
+.articles td.article-long:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Hover Effect for Navigation Links */
+nav ul li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Effect for Buttons */
+.articles a,
+.footer-form button {
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.articles a:hover,
+.footer-form button:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Animation for Images */
+.creativity-wrapper img,
+.articles img,
+.header-filler {
+    transition: transform 0.4s ease;
+}
+
+.creativity-wrapper img:hover,
+.articles img:hover,
+.header-filler:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Footer Credit Hover */
+.footer-credit h3,
+.footer-credit p {
+    transition: opacity 0.3s ease;
+}
+
+.footer-credit:hover h3,
+.footer-credit:hover p {
+    opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .content-aside {
+        flex-direction: column;
+    }
+
+    .header-texts h1 {
+        font-size: 2rem;
+    }
+
+    .header-filler {
+        min-height: 200px;
+    }
+
+    .articles table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 15px;
+    }
+
+    .header-texts {
+        text-align: center;
+    }
+
+    .header-texts h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-texts h3 {
+        font-size: 1rem;
+    }
+
+    .content,
+    aside {
+        padding: 15px;
+    }
+
+    .articles a {
+        width: 80%;
+        display: inline-block;
+    }
+
+    .creativity-wrapper img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nav-logo-title img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-logo-title {
+        flex-direction: row;
+    }
+
+    .articles table td {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: row;
+        align-items: center;
+    }
+    .creativity-wrapper > div {
+        flex: 1 1 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
